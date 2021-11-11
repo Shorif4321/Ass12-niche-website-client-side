@@ -79,9 +79,9 @@ const Purchase = () => {
                     <img className="img-fluid " src={service?.img} className="card-img-top" alt="..."></img>
                     <div className="card-body">
                         <h4 className="card-title">{service?.name}</h4>
-                        <h6> Service Price: $ {service?.price}</h6>
+                        <h6>Price: $ {service?.price}</h6>
                         <p className="card-text mx-3">{service?.des}</p>
-                        <Link to="/home" ><button className="btn-sm live "> Back to Punches </button></Link>
+                        <Link to="/home" ><button className="btn btn-primary "> Back to Punches </button></Link>
                     </div>
                 </div>
                 <div className="col-md-6 col-12 col-sm-12 py-2  m-auto my-5 addService">
@@ -94,7 +94,7 @@ const Purchase = () => {
                         <input type="text" defaultValue={user?.email} ref={emailRef} />
                         <input type="number" ref={phoneRef} placeholder="phone Number" required />
                         <textarea type="text" required ref={addressRef} placeholder="Type your valid address" />
-                        <input type="submit" value="submit" />
+                        <input type="submit" className="bg-primary text-white" value="Purchases Confirem" />
                     </form>
 
                 </div>

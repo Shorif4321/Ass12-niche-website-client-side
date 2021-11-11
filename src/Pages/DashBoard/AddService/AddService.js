@@ -18,12 +18,12 @@ const AddService = () => {
     };
     return (
         <div className="addService">
-            <h1 className="p-5 text-center">Add Your Service</h1>
+            <h1 className="p-5 text-center">Add Your Product</h1>
             <form className="pb-5" onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("name")} placeholder="Type Your Service tittle" />
-                <textarea rows="5" {...register("des")} placeholder="Write Service Description" />
-                <input type="number" {...register("price")} placeholder="Service Price" />
-                <input {...register("img")} placeholder="Image url Please" />
+                <input {...register("name")} placeholder="Type Your Product tittle" />
+                <textarea rows="5" {...register("des")} placeholder="Write Product Description" />
+                <input type="number" {...register("price")} placeholder="Product Price" />
+                <input {...register("img")} placeholder="Product Image url" />
                 <input  className="bg-primary" type="submit" />
             </form>
 

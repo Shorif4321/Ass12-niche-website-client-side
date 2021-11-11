@@ -10,12 +10,12 @@ const Service = (props) => {
                 <img className="img-fluid " src={img} className="card-img-top" alt="..."></img>
                 <div className="card-body">
                     <h4 className="card-title">{name}</h4>
-                    <h6>Service Price: {price}</h6>
+                    <h6>Price: {price}</h6>
                     <p className="card-text">{des.slice(0, 60)}</p>
 
                     {/* =========Dinamic Route setup=========== */}
 
-                    <Link to={`/purchase/${_id}`} ><button className="btn-sm live login"><i className="fas fa-cart-plus"></i>Process Order</button></Link>
+                    <Link to={`/purchase/${_id}`} ><button className="btn-sm live login"><i className="fas fa-cart-plus"></i> Buy Now</button></Link>
                 </div>
             </div>
         </div>

@@ -15,14 +15,16 @@ import MakeAdmin from './MakeAdmin/MakeAdmin.js';
 import MyOrder from '../MyOrder/MyOrder.js';
 import Pay from './Pay/Pay.js';
 import useAuth from '../hooks/useAuth.js';
+import AddReview from './AddReview/AddReview.js';
+import ManageProduct from './ManageProduct/ManageProduct.js';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
      const { user,logOut } = useAuth();
     return (
         <div>
-            <div className="row container-fluid ps-0">
-                <div className="col-md-2  py-5 ps-4 dashbord">
+            <div className="row gx-1 container-fluid">
+                <div className="col-12 col-sm-12 col-md-3  py-5 px-4 dashbord">
                     <Link className="nested" to={`${url}`}>DashBoard</Link>
                     <br />
                     <Link className="nested" to={`${url}/pay`}>Pay Now</Link>
@@ -31,19 +33,23 @@ const DashBoard = () => {
                     <br />
                     <Link to={`${url}/review`} className="nested">Add Review</Link>
                     <br />
+
                     
-                    <Link to={`${url}/addservice`} className="nested">Add Service</Link>
+                    <Link to={`${url}/manageallorder`} className="nested">Manage All Orders</Link>
+                    <br />
+                    <Link to={`${url}/addservice`} className="nested">Add A Product</Link>
                     <br />
                     <Link to={`${url}/makeadmin`} className="nested">Make Admin</Link>
                     <br />
-                    <Link to={`${url}/namageallorder`} className="nested">Manage Order</Link>
+                    <Link to={`${url}/manageproduct`} className="nested">Manage Products</Link>
                     <br />
+
                     {user?.email ? <NavLink
                     onClick={logOut} className="logoutBtn" to="/login">Log out</NavLink> : <> </>
                             } 
                             
                 </div>
-                <div className="col-md-8">
+                <div className="col-12 col-md-9">
                 <Switch>
                 <Route exact path={path}>
                      
@@ -56,17 +62,27 @@ const DashBoard = () => {
                 <Route path={`${path}/myorder`}>
                     <MyOrder></MyOrder>
                 </Route>
+                <Route path={`${path}/review`}>
+                    <AddReview></AddReview>
+                        </Route>
                         
-                <Route path={`${path}/addservice`}>
-                    <AddService></AddService>
-                </Route>
+
+
                         
-                <Route path={`${path}/namageallorder`}>
+                <Route path={`${path}/manageallorder`}>
                     <ManageService></ManageService>
                 </Route>
+  
+                <Route path={`${path}/addservice`}>
+                    <AddService></AddService>
+                </Route>      
                         
                 <Route path={`${path}/makeadmin`}>
                     <MakeAdmin></MakeAdmin>
+                </Route>
+                    
+                <Route path={`${path}/manageproduct`}>
+                    <ManageProduct></ManageProduct>
                 </Route>
                     
                 </Switch>
@@ -79,4 +95,3 @@ const DashBoard = () => {
 };
 
 export default DashBoard;
-git branch -M mai
