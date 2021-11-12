@@ -1,8 +1,8 @@
 # Welcomt to My Fashion Shop Online Plateform
 
-Hwllow my dear customer, We are try to share our best collectin to you and your familly. Our bag are very unick and stylist, that way you can choise a bag without any hazitation. You can see your last customar reviews and you also share your feedback about our product. We belive client satisfaction is the main key to success.
+Hwllow my dear customer, We are try to share our best collectin to you and your familly. Our bag are very unick and stylist, that way you can choise a bag without any hazitation. You can see your last customar reviews and you also share your feedback about our product. We belive client satisfaction is the main key to success....
 
-#Live Websit link is: https://bag-website-eec4d.web.app
+# Live Websit link is: https://bag-website-eec4d.web.app
 
 ## Our latest collectin is on home page
 ## You cand choise more BAG from Explore more form home banner
