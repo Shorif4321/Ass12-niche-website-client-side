@@ -17,32 +17,33 @@ import Pay from './Pay/Pay.js';
 import useAuth from '../hooks/useAuth.js';
 import AddReview from './AddReview/AddReview.js';
 import ManageProduct from './ManageProduct/ManageProduct.js';
+import AdminRoute from '../Login/AdminRoute/AdminRoute.js';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
-     const { user,logOut } = useAuth();
+     const { user,logOut,admin } = useAuth();
     return (
         <div>
             <div className="row gx-1 container-fluid">
                 <div className="col-12 col-sm-12 col-md-3  py-5 px-4 dashbord">
-                    <Link className="nested" to={`${url}`}>DashBoard</Link>
+                   {!admin && <> <Link className="nested" to={`${url}`}>DashBoard</Link>
                     <br />
                     <Link className="nested" to={`${url}/pay`}>Pay Now</Link>
                     <br />
                     <Link className="nested" to={`${url}/myorder`}>My Order</Link>
                     <br />
                     <Link to={`${url}/review`} className="nested">Add Review</Link>
-                    <br />
+                    <br /> </> }
 
                     
-                    <Link to={`${url}/manageallorder`} className="nested">Manage All Orders</Link>
+                    {admin && <> <Link to={`${url}/manageallorder`} className="nested">Manage All Orders</Link>
                     <br />
                     <Link to={`${url}/addservice`} className="nested">Add A Product</Link>
                     <br />
                     <Link to={`${url}/makeadmin`} className="nested">Make Admin</Link>
                     <br />
                     <Link to={`${url}/manageproduct`} className="nested">Manage Products</Link>
-                    <br />
+                    <br /> </>}
 
                     {user?.email ? <NavLink
                     onClick={logOut} className="logoutBtn" to="/login">Log out</NavLink> : <> </>
@@ -69,21 +70,21 @@ const DashBoard = () => {
 
 
                         
-                <Route path={`${path}/manageallorder`}>
+                <AdminRoute path={`${path}/manageallorder`}>
                     <ManageService></ManageService>
-                </Route>
+                </AdminRoute>
   
-                <Route path={`${path}/addservice`}>
+                <AdminRoute path={`${path}/addservice`}>
                     <AddService></AddService>
-                </Route>      
+                </AdminRoute>      
                         
-                <Route path={`${path}/makeadmin`}>
+                <AdminRoute path={`${path}/makeadmin`}>
                     <MakeAdmin></MakeAdmin>
-                </Route>
+                </AdminRoute>
                     
-                <Route path={`${path}/manageproduct`}>
+                <AdminRoute path={`${path}/manageproduct`}>
                     <ManageProduct></ManageProduct>
-                </Route>
+                </AdminRoute>
                     
                 </Switch>
                     

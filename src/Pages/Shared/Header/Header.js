@@ -17,18 +17,12 @@ const Header = () => {
 
                         <nav className="ms-auto">
                             <NavLink className="link-style" to="/home"> Home </NavLink>
-                           {/*  <NavLink className="link-style live" to="/myOrder">My Orders</NavLink> */}
                             
                            {user?.email ? <NavLink className="link-style live" to="/dashboard">DashBoard</NavLink> : <> </>}
-                           
-                          {/*   
-                            {user?.email ? <NavLink className="link-style live" to="/magnageOrder"> Manage Order</NavLink> : <> </>} */}
-
-                            {/* {user?.email ? <small className="text-white mx-2" >{user.displayName}  <img className="userImg" src={user.photoURL} /> </small> : <></>} */}
-
+                        
                             {user?.email ? <NavLink
                                 onClick={logOut} className="link-style login-2" to="/login">Log out</NavLink> :
-                                <NavLink className="link-style login" to="/login">Login</NavLink>
+                                <NavLink className="link-style login-2" to="/login">Login</NavLink>
                             } 
                         </nav>
                     </Navbar.Collapse>
