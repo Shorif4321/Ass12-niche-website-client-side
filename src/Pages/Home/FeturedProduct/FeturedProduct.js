@@ -3,9 +3,12 @@ import product from '../../images/product.jpg'
 
 const FeturedProduct = () => {
     return (
-  <div className="p-5 bg-secondary ">
-      <div className="card mb-3">
-        <div className="row g-0 d-flex align-items-center">
+      <div className="p-5 bg-secondary ">
+        <h1 className="mb-5 text-white">Fetured Product </h1>
+        <div className="card mb-3">
+          
+          <div className="row g-0 d-flex align-items-center">
+            
           <div className="col-md-6">
             <img src={product} className="img-fluid rounded-start" alt="..."/>
           </div>
