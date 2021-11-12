@@ -22,6 +22,7 @@ const MakeAdmin = () => {
                 if (data.modifiedCount) {
                     setSuccess(true)
                     console.log(data);
+                    e.target.reset()
 
                    
            };
@@ -29,6 +30,7 @@ const MakeAdmin = () => {
 
         e.preventDefault()
     }
+    
     return (
         <div className="py-5">
             <h1 className="p-3">Make an Admin</h1>

@@ -35,10 +35,12 @@ const ManageService = () => {
                 }
             })
     }
+
     if (loading) {
         return <Loading></Loading>
     }
-    //Console.log(manageOrder)
+
+    //Delete Start 
     const handleManageDelete = id => {
         const process = window.confirm('Are you want to DELETE?')
         if (process) {
@@ -58,9 +60,11 @@ const ManageService = () => {
         }
 
     }
+
     if (loading) {
         return <Loading></Loading>
     }
+    
     return (
         <div className="container-fluid">
             <h2 className="text-center py-5">Total Order is Running {manageOrder.length}</h2>

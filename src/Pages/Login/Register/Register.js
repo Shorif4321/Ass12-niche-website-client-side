@@ -27,9 +27,10 @@ const Register = () => {
        registerUser(loginData.email ,loginData.password,loginData.name,history)
         e.preventDefault()
     }
-    return (
+
+return (
+    <div>
         <div>
-             <div>
             <div className="p-5">
                     <h2>Please Register here</h2>
                     
@@ -76,12 +77,9 @@ const Register = () => {
                     </form>}
                     {loading && <div className="py-5 my-5"><Spinner className="p-5" animation="grow" variant="info" /> </div>}
                     
-                    
-
             </div>
-        </div>
-             
-        </div>
+        </div>       
+    </div>
     );
 };
 

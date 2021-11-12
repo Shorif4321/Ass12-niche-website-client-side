@@ -4,10 +4,12 @@ import { Redirect, Route } from 'react-router';
 import useAuth from '../../hooks/useAuth.js';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, loading } = useAuth();
+  const { user, loading } = useAuth();
+  
     if(loading){return <div className="py-5 my-5"><Spinner className="p-5" animation="grow" variant="info" /> </div>}
-    return (
-        <Route
+    
+  return (
+    <Route
       {...rest}
       render={({ location }) =>
        user?.email ? (

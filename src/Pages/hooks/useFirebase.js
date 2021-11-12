@@ -15,10 +15,10 @@ const useFirebase = () => {
   const auth = getAuth();
   
     const registerUser = (email, password,name,history) => {
-       setLoading(true)
+        setLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
-               setAuthError('')
+            setAuthError('')
             const newUser = { email, displayName: name }
             setUser(newUser)
             //Set New User
@@ -30,44 +30,43 @@ const useFirebase = () => {
           }).then(() => {
          
             }).catch((error) => {
-            });
-                    
+            });    
             history.replace('/');
-        })
-        .catch((error) => {
-        setAuthError(error.message);
-        })
+          })
+          .catch((error) => {
+          setAuthError(error.message);
+          })
           .finally(()=>setLoading(false));
     }
 
 
     const loginUser = (email, password,location,history) => {
-         setLoading(true)
+        setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
             const destination = location?.state?.from || '/'
             history.replace(destination);
-          setAuthError('')
+            setAuthError('')
             })
            .catch((error) => {
-          setAuthError(error.message);
+           setAuthError(error.message);
            })
-        .finally(()=>setLoading(false));
-         }
+           .finally(()=>setLoading(false));
+        }
 
 
   //observe the user state
     useEffect(() => {
       const unsubscribe = onAuthStateChanged(auth, (user) => {
-   if (user) {
-    setUser(user)
-  } else {
+      if (user) {
+      setUser(user)
+      } else {
       setUser({})
-          }
-          setLoading(false)
+      }
+        setLoading(false)
       });
-        return () => unsubscribe;
-    }, [])
+      return () => unsubscribe;
+     }, [])
     
 
   useEffect(() => {
@@ -85,7 +84,7 @@ const useFirebase = () => {
         }).catch((error) => {
         // An error happened.
         })
-            .finally(()=>setLoading(false));
+        .finally(()=>setLoading(false));
     }
 
   const saveUser = (email,displayName) => {
@@ -100,7 +99,6 @@ const useFirebase = () => {
     })
     .then()
   }
-
 
     return {
       user,

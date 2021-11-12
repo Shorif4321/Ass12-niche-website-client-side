@@ -21,7 +21,8 @@ import AdminRoute from '../Login/AdminRoute/AdminRoute.js';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
-     const { user,logOut,admin } = useAuth();
+    const { user, logOut, admin } = useAuth();
+    
     return (
         <div>
             <div className="row gx-1 container-fluid">
@@ -48,45 +49,42 @@ const DashBoard = () => {
                     {user?.email ? <NavLink
                     onClick={logOut} className="logoutBtn" to="/login">Log out</NavLink> : <> </>
                             } 
-                            
                 </div>
+
                 <div className="col-12 col-md-9">
-                <Switch>
-                <Route exact path={path}>
-                     
-                </Route>
-                        
-                <Route path={`${path}/pay`}>
-                    <Pay></Pay>
-                </Route>
-                        
-                <Route path={`${path}/myorder`}>
-                    <MyOrder></MyOrder>
-                </Route>
-                <Route path={`${path}/review`}>
-                    <AddReview></AddReview>
+                    <Switch>
+                        <Route exact path={path}>
                         </Route>
+                                
+                        <Route path={`${path}/pay`}>
+                            <Pay></Pay>
+                        </Route>
+                                
+                        <Route path={`${path}/myorder`}>
+                            <MyOrder></MyOrder>
+                        </Route>
+                                
+                        <Route path={`${path}/review`}>
+                            <AddReview></AddReview>
+                        </Route>
+                                
                         
-
-
-                        
-                <AdminRoute path={`${path}/manageallorder`}>
-                    <ManageService></ManageService>
-                </AdminRoute>
-  
-                <AdminRoute path={`${path}/addservice`}>
-                    <AddService></AddService>
-                </AdminRoute>      
-                        
-                <AdminRoute path={`${path}/makeadmin`}>
-                    <MakeAdmin></MakeAdmin>
-                </AdminRoute>
-                    
-                <AdminRoute path={`${path}/manageproduct`}>
-                    <ManageProduct></ManageProduct>
-                </AdminRoute>
-                    
-                </Switch>
+                        <AdminRoute path={`${path}/manageallorder`}>
+                            <ManageService></ManageService>
+                        </AdminRoute>
+        
+                        <AdminRoute path={`${path}/addservice`}>
+                            <AddService></AddService>
+                        </AdminRoute>      
+                                
+                        <AdminRoute path={`${path}/makeadmin`}>
+                            <MakeAdmin></MakeAdmin>
+                        </AdminRoute>
+                            
+                        <AdminRoute path={`${path}/manageproduct`}>
+                            <ManageProduct></ManageProduct>
+                        </AdminRoute>
+                    </Switch>
                     
                 </div>
             </div>

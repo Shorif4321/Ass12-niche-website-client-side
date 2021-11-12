@@ -10,7 +10,7 @@ const Review = (props) => {
                 <img className="img-fluid reviewImg" src={img}></img>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">{review?.slice(0, 45)}</p>
+                    <p className="card-text">{review?.slice(0,40)}</p>
                     <Rating
                     initialRating={Retting}
                     emptySymbol="far fa-star icon-color"

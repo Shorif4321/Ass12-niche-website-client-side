@@ -48,8 +48,7 @@ const ManageProduct = () => {
                         <div className="card h-100">
                             <img src={product.img} className="card-img-top" alt="..."></img>
                             <div className="card-body text-center">
-                                <h3 className="card-title text-start">{product.service}</h3>
-                                <h6 className="card-title text-start">Status: {product.status}</h6>
+                                <h5 className="card-title text-start">{product.name}</h5>
                                 <p className="card-text text-start">Price: ${product.price}</p>
                                 <p className="card-text text-start">{product.des.slice(0, 150)}</p>
                                 <button onClick={() => hanldeproductDelete(product._id)} className="btn btn-danger my-3">Cancel product</button>

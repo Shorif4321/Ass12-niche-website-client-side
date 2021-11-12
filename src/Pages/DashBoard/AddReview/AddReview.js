@@ -17,8 +17,8 @@ const AddReview = () => {
             })
     };
     return (
-        <div className="addReview ">
-            <h1 className="p-5 text-center">Add Your Review</h1>
+        <div className="addReview">
+            <h1 className="p-5 text-center">Add Your FeedBack</h1>
             <form className="pb-5" onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("name")} placeholder="Your Name" required />
                 <input {...register("img")} placeholder="Please Add Your Image" required />
