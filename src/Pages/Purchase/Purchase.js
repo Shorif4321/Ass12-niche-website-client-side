@@ -32,7 +32,7 @@ const Purchase = () => {
 
         const newOder = { service, des, price, img, name, email, phone, address }
         console.log(newOder)
-        fetch('http://localhost:5000/order', {
+        fetch('https://nameless-cove-93085.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -58,14 +58,14 @@ const Purchase = () => {
     const [loading, setLoading] = useState(true)
     
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${Id}`)
+        fetch(`https://nameless-cove-93085.herokuapp.com/services/${Id}`)
             .then(res => res.json())
             .then(data => {
                 setService(data)
                 setLoading(false)
             })
 
-    }, []);
+    }, [Id]);
 
     if (loading) {
         return <Loading></Loading>
