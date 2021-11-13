@@ -1,11 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-bootstrap';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  useParams,
   useRouteMatch
 } from "react-router-dom";
 import AddService from './AddService/AddService.js';
@@ -18,6 +16,7 @@ import useAuth from '../hooks/useAuth.js';
 import AddReview from './AddReview/AddReview.js';
 import ManageProduct from './ManageProduct/ManageProduct.js';
 import AdminRoute from '../Login/AdminRoute/AdminRoute.js';
+import PrivateRoute from '../Login/PrivateRoute/PrivateRoute.js';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
@@ -56,17 +55,17 @@ const DashBoard = () => {
                         <Route exact path={path}>
                         </Route>
                                 
-                        <Route path={`${path}/pay`}>
+                        <PrivateRoute path={`${path}/pay`}>
                             <Pay></Pay>
-                        </Route>
+                        </PrivateRoute>
                                 
-                        <Route path={`${path}/myorder`}>
+                        <PrivateRoute path={`${path}/myorder`}>
                             <MyOrder></MyOrder>
-                        </Route>
+                        </PrivateRoute>
                                 
-                        <Route path={`${path}/review`}>
+                        <PrivateRoute path={`${path}/review`}>
                             <AddReview></AddReview>
-                        </Route>
+                        </PrivateRoute>
                                 
                         
                         <AdminRoute path={`${path}/manageallorder`}>

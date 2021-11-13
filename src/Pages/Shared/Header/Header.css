@@ -1,23 +1,31 @@
-.header{
-    background-color:#194271;  
+.header-color{
+    background-color:#000000;  
 }
 .link-style{
-    color: white;
     font-size: 17px;
     text-decoration: none;
     margin: 5px;
     padding: 0 10px;
     line-height: 40px;
     font-family: sans-serif;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 12px;
+    border: 2px solid gold;
     }
+
     .link-style:hover{
-        color: rgb(0, 110, 255);
+        border: 2px solid gold;
+        color: white;
+        background-color: #F63E7B;
+        
     }
     .login{
         border-radius: 5px;
-        padding: 5px 10px;
+        padding: 7px 12px;
         background-color: #F63E7B;
-        color: black;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
         border: 2px solid gold;
     }
     .login:hover{
@@ -48,4 +56,50 @@
         height: 40px;
         width: 40ox;
         border-radius: 50%;
+    }
+    .logres{
+        background-color:#0D6EFD;
+        color: white;
+        font-weight: 500;
+        padding: 5px;
+        border-radius: 5;
+    }
+    .logres:hover{
+        background-color: #F63E7B;
+         border: 2px solid gold;
+    }
+    .addServicebtn{
+        background-color: #F63E7B;
+        color: white;
+        font-weight: 500;
+        padding: 5px;
+        border:2px solid black;
+        border-radius: 5px;
+    }
+    .addServicebtn:hover{
+        background-color:#0D6EFD;
+         border: 2px solid gold;
+    }
+    .aprove{
+         background-color:#0D6EFD;
+         color: white;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid gold;
+    }
+    .aprove:hover{
+        background-color: green;
+    }
+    .delete{
+         background-color:#F63E7B;
+         color: white;
+        font-weight: 500;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid gold;
+    }
+    .delete:hover{
+        background-color: #07295c;
+        color: white;
     }

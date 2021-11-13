@@ -54,7 +54,7 @@ const MyOrder = () => {
                                 <h6 className="card-title text-start">Status: {order.status}</h6>
                                 <p className="card-text text-start">Price: ${order.price}</p>
                                 <p className="card-text text-start">{order.des.slice(0, 150)}</p>
-                                <button onClick={() => hanldeOrderDelete(order._id)} className="btn btn-danger my-3">Cancel Order</button>
+                                <button onClick={() => hanldeOrderDelete(order._id)} className="btn login my-3">Cancel Order</button>
                             </div>
                         </div>
                     </div>)

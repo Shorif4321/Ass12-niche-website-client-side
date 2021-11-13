@@ -51,7 +51,7 @@ const ManageProduct = () => {
                                 <h5 className="card-title text-start">{product.name}</h5>
                                 <p className="card-text text-start">Price: ${product.price}</p>
                                 <p className="card-text text-start">{product.des.slice(0, 150)}</p>
-                                <button onClick={() => hanldeproductDelete(product._id)} className="btn btn-danger my-3">Cancel product</button>
+                                <button onClick={() => hanldeproductDelete(product._id)} className="btn login my-3">Delete Product</button>
                             </div>
                         </div>
                     </div>)

@@ -50,7 +50,7 @@ const Login = () => {
                         name="password"
                         placeholder="Password Please" />
                     <br />
-                    <input className="bg-primary w-50 mb-2" type="submit" value="Login" />
+                    <input className="logres w-50 mb-2" type="submit" value="Login" />
                     <br />
                     <Link style={{ textDecoration: 'none',color: 'info', fontWeight:'bold' }} to="/register">New User? Please Register</Link>
                 </form>}

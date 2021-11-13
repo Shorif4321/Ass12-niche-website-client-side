@@ -70,7 +70,7 @@ return (
                             name="password2"
                             placeholder="Re-type Password" />
                     <br />
-                    <input className="bg-primary w-50 mb-2" type="submit" value="Register" />
+                    <input className="logres w-50 mb-2" type="submit" value="Register" />
                     <br />
                         <Link style={{ textDecoration: 'none', color: 'info', fontWeight:'bold' }} to="/login">Already Register? Please Login</Link>
                     

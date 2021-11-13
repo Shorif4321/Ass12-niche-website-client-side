@@ -79,8 +79,8 @@ const ManageService = () => {
                             <h6 className="card-title text-start">Status: {order.status}</h6>
                             <h6 className="card-text text-start">Price: ${order.price}</h6>
                             <p className="card-text text-start">{order.des.slice(0, 150)}</p>
-                            <button onClick={() => handleUpdate(order._id)} className="btn btn-primary mx-3">Approve</button>
-                            <button onClick={() => handleManageDelete(order._id)} className="btn btn-danger  mx-3">Delete</button>
+                            <button onClick={() => handleUpdate(order._id)} className="btn aprove mx-3">Approve</button>
+                            <button onClick={() => handleManageDelete(order._id)} className="btn delete mx-3">Delete</button>
                         </div>
                     </div>
                 </div>)

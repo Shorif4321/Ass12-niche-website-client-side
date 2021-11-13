@@ -9,9 +9,9 @@ const Header = () => {
     const { user,logOut } = useAuth();
     return (
         <div>
-             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="header">
+             <Navbar collapseOnSelect expand="lg" className="header-color">
                 <Container>
-                    <Navbar.Brand to="/home"><h1>FashionShop</h1></Navbar.Brand>
+                    <Navbar.Brand to="/home"><h1 className="text-white fw-bold"><NavLink style={{textDecoration:'none'}} to="/home"><span style={{color:"#FFD700"}}>Fashion</span><span style={{color:"#F63E7B"}}>Shop</span> </NavLink></h1></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
 

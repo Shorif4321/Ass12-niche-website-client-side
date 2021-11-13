@@ -24,7 +24,7 @@ const AddReview = () => {
                 <input {...register("img")} placeholder="Please Add Your Image" required />
                 <textarea rows="3" {...register("review")} placeholder="Write Your Awasome Feedback for increae our bussiness" required />
                 <input type="number" {...register("Retting")} placeholder="Add review retting 1 to 5" />
-                <input  className="bg-primary" type="submit" />
+                <input  className="login" type="submit" />
             </form>
 
         </div>
