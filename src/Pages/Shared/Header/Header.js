@@ -12,8 +12,8 @@ const Header = () => {
              <Navbar collapseOnSelect expand="lg" className="header-color">
                 <Container>
                     <Navbar.Brand to="/home"><h1 className="text-white fw-bold"><NavLink style={{textDecoration:'none'}} to="/home"><span style={{color:"#FFD700"}}>Fashion</span><span style={{color:"#F63E7B"}}>Shop</span> </NavLink></h1></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <Navbar.Toggle className="navToggle" aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse active id="responsive-navbar-nav">
 
                         <nav className="ms-auto">
                             <NavLink className="link-style" to="/home"> Home </NavLink>

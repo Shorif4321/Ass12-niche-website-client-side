@@ -1,6 +1,19 @@
 .header-color{
-    background-color:#000000;  
+    background-color:black; 
+    color: white;
 }
+/* toogle color */
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: gold !important;
+    border: 1px solid #F63E7B !important;
+    border-radius: 0.25rem;
+    transition: box-shadow .15s ease-in-out;
+    color: #F63E7B;
+}
+
 .link-style{
     font-size: 17px;
     text-decoration: none;
