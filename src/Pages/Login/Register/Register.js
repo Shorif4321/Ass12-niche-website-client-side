@@ -40,8 +40,9 @@ return (
                    
                     {authError && <div class="alert alert-danger m-auto mt-3 w-50 " role="alert">
                        {authError}
-                      </div> }
-                {!loading && <form onSubmit={handleRegister}> 
+                </div>}
+                
+                    {!loading && <form onSubmit={handleRegister}> 
                         <input className="m-2 w-50"
                             required
                             type="text"
@@ -72,9 +73,10 @@ return (
                     <br />
                     <input className="logres w-50 mb-2" type="submit" value="Register" />
                     <br />
+
                         <Link style={{ textDecoration: 'none', color: 'info', fontWeight:'bold' }} to="/login">Already Register? Please Login</Link>
-                    
-                    </form>}
+                </form>}
+                
                     {loading && <div className="py-5 my-5"><Spinner className="p-5" animation="grow" variant="info" /> </div>}
                     
             </div>

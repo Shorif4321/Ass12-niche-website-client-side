@@ -27,13 +27,14 @@ const Login = () => {
         <div>
             <div className="p-5">
                 <h2>Please Login here</h2>
+
                  {user.email && <div className="alert alert-success mb-3 m-auto mt-3 w-50" role="alert">
                     Login Success
                    </div> }
-                   
-                    {authError && <div class="alert alert-danger m-auto mt-3 mb-3 w-50 " role="alert">
-                       {authError}
-                      </div> }
+                {authError && <div class="alert alert-danger m-auto mt-3 mb-3 w-50 " role="alert">
+                    {authError}
+                </div>}
+                
                 {!loading && <form onSubmit={handleLogin}>
                         
                     <input className=" w-50"
@@ -54,6 +55,7 @@ const Login = () => {
                     <br />
                     <Link style={{ textDecoration: 'none',color: 'info', fontWeight:'bold' }} to="/register">New User? Please Register</Link>
                 </form>}
+                
                 {loading && <div className="py-5 my-5"><Spinner className="p-5" animation="grow" variant="info" /> </div>}
                
             </div>

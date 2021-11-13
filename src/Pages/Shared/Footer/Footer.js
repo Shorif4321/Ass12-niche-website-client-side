@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Footer.css'
 
 const Footer = () => {
@@ -33,6 +34,7 @@ const Footer = () => {
                         <i className="fs-2  m-2 fab fa-facebook"></i>
                         <i className="fs-2 m-2 fab fa-google ms-3"></i>
                         <i className="fs-2  m-2 fab fa-twitter ms-3"></i>
+                        <h1 className="text-white fw-bold"><NavLink style={{textDecoration:'none'}} to="/home"><span style={{color:"#FFD700"}}>Fashion</span><span style={{color:"#F63E7B"}}>Shop</span> </NavLink></h1>
                     </div>
                 </div>
             </div>
