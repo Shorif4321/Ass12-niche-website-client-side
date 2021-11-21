@@ -2,6 +2,7 @@ import React from 'react';
 import Rating from 'react-rating';
 import './Review.css'
 
+/* Review section  */
 const Review = (props) => {
     const { name, img, review,Retting } = props.review;
     return (
